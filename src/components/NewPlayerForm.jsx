@@ -1,7 +1,63 @@
-const NewPlayerForm = () => {
-    return (
-        <h1>New Player Form</h1>
-    )
-};
+import React, { useState } from 'react';
+import { createPlayer } from '../API/ajaxHelpers'; // Update with appropriate API functions
 
-export default NewPlayerForm
+function NewPlayerForm() {
+  const [newPlayer, setNewPlayer] = useState({
+    name: '',
+    age: '',
+    breed: '',
+  });
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setNewPlayer((prevPlayer) => ({
+      ...prevPlayer,
+      [name]: value,
+    }));
+  };
+
+  const handleCreatePlayer = async () => {
+    try {
+      await createPlayer(newPlayer);
+      // Handle successful creation (e.g., show success message, clear form)
+      setNewPlayer({
+        name: '',
+        age: '',
+        breed: '',
+      });
+    } catch (error) {
+      console.error('Error creating player:', error);
+      // Handle error (e.g., show error message)
+    }
+  };
+
+  return (
+    <div>
+      <h2>Create New Player</h2>
+      <input
+        type="text"
+        name="name"
+        placeholder="Player Name"
+        value={newPlayer.name}
+        onChange={handleInputChange}
+      />
+      <input
+        type="text"
+        name="age"
+        placeholder="Player Age"
+        value={newPlayer.age}
+        onChange={handleInputChange}
+      />
+      <input
+        type="text"
+        name="breed"
+        placeholder="Player Breed"
+        value={newPlayer.breed}
+        onChange={handleInputChange}
+      />
+      <button onClick={handleCreatePlayer}>Create Player</button>
+    </div>
+  );
+}
+
+export default NewPlayerForm;
