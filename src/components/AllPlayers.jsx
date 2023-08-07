@@ -19,7 +19,9 @@ const AllPlayers = () => {
           {players.map((player) => (
             <div key={player.id}>
               <h2>{player.name}</h2>
-              {/* Render more player details */}
+              <p>{player.breed}</p>
+              <p>{player.age}</p>
+              
               <Link to={`/players/${player.id}`}>See Details</Link>
             </div>
           ))}

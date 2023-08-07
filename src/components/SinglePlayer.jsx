@@ -35,9 +35,12 @@ function SinglePlayer() {
     return (
       <div>
         <h2>{player.name}</h2>
-        {/* Display other player details */}
+        <p>{player.age}</p>
+        <p>{player.breed}</p>
+        <p>{player.status}</p>
+        <p>{player.teamId}</p>
         <img src={player.imageUrl} alt={player.name} />
-        {/* Render other player details */}
+        
         <button onClick={handleDelete}>Delete Player</button>
       </div>
     );
