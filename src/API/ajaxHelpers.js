@@ -52,3 +52,22 @@ export const deletePlayer = async (playerId) => {
         );
     }
 };
+
+export const createPlayer = async (playerObj) => {
+    try {
+        const response = await fetch (APIURL + 'players', {
+            method: 'POST',
+            headers: {
+                'Content-Type':'application/json',
+            },
+            body: JSON.stringify (playerObj),
+        });
+        if (!response.ok) {
+            throw new Error ('Failed to add player');
+        }
+        const data = await response.json();
+        return data;
+    } catch (err) {
+        console.error('Oops, something went wrong with adding that player!', err);
+    }
+};
