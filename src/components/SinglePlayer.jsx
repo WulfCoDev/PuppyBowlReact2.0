@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { fetchSinglePlayer, deletePlayer } from '../API/ajaxHelpers'; // Update with appropriate API functions
+import { fetchSinglePlayer, deletePlayer } from '../API/ajaxHelpers';
+import '../styles.css'
 
 function SinglePlayer() {
     const { id } = useParams();
@@ -33,9 +34,8 @@ function SinglePlayer() {
     }
   
     return (
-      <div>
+      <div className='single-player-card'>
         <h2>{player.name}</h2>
-        <p>{player.age}</p>
         <p>{player.breed}</p>
         <p>{player.status}</p>
         <p>{player.teamId}</p>

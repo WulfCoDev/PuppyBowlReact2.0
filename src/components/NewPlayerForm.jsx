@@ -22,7 +22,7 @@ function NewPlayerForm() {
       // Handle successful creation (e.g., show success message, clear form)
       setNewPlayer({
         name: '',
-        age: '',
+        imageUrl: '',
         breed: '',
       });
     } catch (error) {
@@ -43,9 +43,9 @@ function NewPlayerForm() {
       />
       <input
         type="text"
-        name="age"
-        placeholder="Player Age"
-        value={newPlayer.age}
+        name="imageUrl"
+        placeholder="Player Image URL"
+        value={newPlayer.imageUrl}
         onChange={handleInputChange}
       />
       <input

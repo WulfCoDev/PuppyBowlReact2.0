@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom";
 import { fetchPlayers } from "../API/ajaxHelpers";
+import '../styles.css'
 const AllPlayers = () => {
     const [players, setPlayers] = useState([]);
 
@@ -15,14 +16,14 @@ const AllPlayers = () => {
     }, []);
     
     return (
-        <div>
+        <div className="all-players">
           {players.map((player) => (
-            <div key={player.id}>
+            <div key={player.id} className="player-card">
               <h2>{player.name}</h2>
-              <p>{player.breed}</p>
-              <p>{player.age}</p>
-              
-              <Link to={`/players/${player.id}`}>See Details</Link>
+              <img src={player.imageUrl} alt={player.name} />
+              <h3>{player.status}</h3>
+
+              <Link className="see-details-link" to={`/players/${player.id}`}>See Details</Link>
             </div>
           ))}
         </div>

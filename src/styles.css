@@ -1,0 +1,87 @@
+/* Player Card */
+.player-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: calc(20% - 32px);
+    vertical-align: top;
+    text-align: center;
+    background-color: lightblue;
+  }
+  
+  .player-card img {
+    max-width: 100%;
+    height: 250px;
+    border-radius: 25%;
+    margin-bottom: 8px;
+  }
+  
+  .player-card h4 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  
+  
+  /* All Players Page */
+  .all-players {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .see-details-link {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+  
+  .see-details-link:hover {
+    background-color: #0056b3;
+  }
+
+  /* Single Player Card */
+  .single-player-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px auto;
+    max-width: 500px; /* Set your desired max-width */
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .single-player-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 25%;
+    margin-bottom: 16px;
+  }
+  
+  .single-player-card h2 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .single-player-card button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
