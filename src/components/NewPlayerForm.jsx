@@ -32,7 +32,7 @@ function NewPlayerForm() {
   };
 
   return (
-    <div>
+    <div className='new-player-form'>
       <h2>Create New Player</h2>
       <input
         type="text"

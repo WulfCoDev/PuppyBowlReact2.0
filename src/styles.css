@@ -86,3 +86,65 @@
     border-radius: 4px;
     cursor: pointer;
   }
+
+  /* NavBar */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    position: top;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 16px;
+    font-size: 0.5rem;
+  }
+
+  .navbar a:last-child {
+    margin-right: 0;
+  }
+
+  /* New Player Form */
+.new-player-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center; /* Center the content */
+  }
+  
+  .new-player-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+  }
+  
+  .new-player-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in width */
+  }
+  
+  .new-player-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .new-player-form button:hover {
+    background-color: #0056b3;
+  }
