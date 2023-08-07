@@ -35,11 +35,11 @@ function SinglePlayer() {
   
     return (
       <div className='single-player-card'>
-        <h2>{player.name}</h2>
-        <p>{player.breed}</p>
-        <p>{player.status}</p>
-        <p>{player.teamId}</p>
+        <h1>{player.name}</h1>
         <img src={player.imageUrl} alt={player.name} />
+        <h2>{player.breed}</h2>
+        <h3>{player.status}</h3>
+        <p>{player.teamId}</p>
         
         <button onClick={handleDelete}>Delete Player</button>
       </div>
